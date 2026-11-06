@@ -16,6 +16,7 @@ class MainScreen extends StatelessWidget {
         backgroundColor: const Color(0xFFF1F3F8),
         appBar: AppBar(
           title: const Text ('liburan keluarga'),
+          // textAlign: TextAlign.left,
           backgroundColor:  Color.fromARGB(255, 21, 116, 4),
           foregroundColor: Colors.white,
           centerTitle: true,
@@ -58,7 +59,85 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
 
+              ),
+
+              const Padding(
+                padding: EdgeInsets.fromLTRB(16, 22, 16, 10),
+                child: Text(
+                  'Tentang Taman',
+                  style: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
+              const Padding(
+                padding: EdgeInsetsGeometry.symmetric(horizontal: 16),
+                child: Text(
+                  'Taman bunga menjadi tempat rekreasi yang'
+                  'menwarkan pemandangan bewarna-warni dan'
+                  'suasana yang menyegarkan. Pengunjung dapat'
+                  'berjalan santai, berfoto bersama keluarga, serta'
+                  'menikmati waktu di ruang terbuka.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontSize: 15,
+                    height: 1.6,
+                    color: Colors.black87,
+                  ),
+                ), 
+              ),
+
+              const SizedBox(height: 24),
+
+              Container(
+                width: double.infinity,
+                color: Colors.green,
+                padding: const EdgeInsets.all(16),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Rencana Kunjungan',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Color.fromARGB(0, 8, 97, 23),
+                          size: 20,
+                        ),
+                        SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            'bandungan,semarang',
+                            style: TextStyle(color: Colors.black87,fontSize: 14),
+                          ))],
+                    )
+                  ]
+
+                )
               )
+
+              Row(
+                children: [
+                  Icons(Icons.access_time, color: Colors.brown),
+                  SizedBox(width: 12),
+                  Text('jam buka'),
+                  Spacer(),
+                  Text(
+                    '08.00 - 17.00',
+                    style: TextStyle(fontWeight: fontweight.bold))
+                ],
+              )
+
+              
             ],
           ),
         ),
